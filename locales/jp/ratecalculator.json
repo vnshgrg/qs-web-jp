@@ -1,0 +1,9 @@
+{
+    "rate-calculator": "レート計算機",
+    "description": "現在の為替レートに基づいて送金金額を計算",
+    "from": "送信国",
+    "to": "受入国",
+    "Sending": "送信",
+    "Receiving": "受信",
+    "amount": "金高"
+}

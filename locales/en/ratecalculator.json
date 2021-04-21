@@ -1,0 +1,9 @@
+{
+    "rate-calculator": "Rate calculator",
+    "description": "Calculate your remittance amount based on our current exchange rate.",
+    "from": "Sending from",
+    "to": "Receiving to",
+    "Sending": "Sending",
+    "Receiving": "Receiving",
+    "amount": " amount"
+}

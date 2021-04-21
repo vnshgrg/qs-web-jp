@@ -1,0 +1,8 @@
+{
+    "locales": ["en", "jp", "np"],
+    "defaultLocale": "jp",
+    "pages": {
+        "*": ["common", "navigation"],
+        "/": ["ratecalculator", "hero"]
+    }
+}
