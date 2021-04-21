@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../header';
-import Footer from '../footer';
+import Header from '../Header';
+import Footer from '../Footer';
 import { Hero } from '../../components';
 
-const mainLayout = ({ children }) => {
+const MainLayout = ({ children }) => {
     return (
         <>
             <Header>
@@ -15,4 +15,4 @@ const mainLayout = ({ children }) => {
     );
 };
 
-export default mainLayout;
+export default MainLayout;
