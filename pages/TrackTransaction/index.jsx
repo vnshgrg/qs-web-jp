@@ -84,7 +84,9 @@ const Component = () => {
     const ResultComponent = () => {
         const { txnid, status, updatedTime, error } = result;
         const TS = new Date(updatedTime);
-        const time = `${TS.toLocaleTimeString()} ${TS.toDateString()}`;
+        const time = `${TS.toLocaleTimeString('en-US', {
+            timeZone: 'Asia/Tokyo'
+        })} ${TS.toDateString()}`;
         if (error) {
             return <ErroComp txnid={txnid} />;
         }
