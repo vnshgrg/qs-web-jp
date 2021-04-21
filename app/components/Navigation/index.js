@@ -130,35 +130,30 @@ const Navigation = () => {
                             </div>
                         </div>
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            <a
-                                href="#"
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                                Product
-                            </a>
-
-                            <a
-                                href="#"
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                                Features
-                            </a>
-
-                            <a
-                                href="#"
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                                Marketplace
-                            </a>
-
-                            <a
-                                href="#"
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                                Company
+                            <Link href="/About">
+                                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    {t('about')}
+                                </a>
+                            </Link>
+                            <Link href="/HowToSendMoney">
+                                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    {t('how-to-send')}
+                                </a>
+                            </Link>
+                            <Link href="/HowToRegister">
+                                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    {t('how-to-register')}
+                                </a>
+                            </Link>
+                            <Link href="/Branches">
+                                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    {t('branches')}
+                                </a>
+                            </Link>
+                            <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                {t('notices')}
                             </a>
                         </div>
-                        <a
-                            href="#"
-                            className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
-                            Log in
-                        </a>
                         <LanguageSwitcher />
                     </div>
                 </div>
