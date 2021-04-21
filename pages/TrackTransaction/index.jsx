@@ -83,7 +83,7 @@ const Component = () => {
 
     const ResultComponent = () => {
         const { txnid, status, updatedTime, error } = result;
-        const TS = new Date(response.data.updatedTime);
+        const TS = new Date(updatedTime);
         const time = `${TS.toLocaleTimeString()} ${TS.toDateString()}`;
         if (error) {
             return <ErroComp txnid={txnid} />;
