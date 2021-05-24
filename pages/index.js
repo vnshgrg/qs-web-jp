@@ -13,15 +13,16 @@ const Component = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="">
                         <h2 className="text-base text-blue-500 font-semibold tracking-wide uppercase">
-                            Send happiness
+                            Send money, Send happiness
                         </h2>
                         <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-blue-700 sm:text-4xl">
-                            International remittance service
+                            Setting the standard for International remittance
+                            service
                         </p>
                         <p className="mt-4 max-w-2xl text-xl text-gray-500">
-                            Lorem ipsum dolor sit amet consect adipisicing elit.
-                            Possimus magnam voluptatum cupiditate veritatis in
-                            accusamus quisquam.
+                            We are the fastest growing international remittance
+                            service provider with best rate in the market and no
+                            hidden fees.
                         </p>
                     </div>
 
@@ -30,36 +31,30 @@ const Component = () => {
                             <BlobComp
                                 icon="lightning-blot"
                                 title="Transfers are instant">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Maiores impedit perferendis
-                                suscipit eaque, iste dolor cupiditate blanditiis
-                                ratione.
+                                Simple remittance request with fast payment.
+                                Transfer money easily through your smartphone
+                                from anywhere
                             </BlobComp>
 
                             <BlobComp
                                 icon="lock-closed"
                                 title="Secure & hassle free">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Maiores impedit perferendis
-                                suscipit eaque, iste dolor cupiditate blanditiis
-                                ratione.
+                                Partnership with the world’s trusted banks and
+                                payment providers. Safe system licensed by
+                                financial authorities.
                             </BlobComp>
                             <BlobComp
                                 icon="globe"
                                 title="Competitive exchange rates">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Maiores impedit perferendis
-                                suscipit eaque, iste dolor cupiditate blanditiis
-                                ratione.
+                                Save up to 90% with lower fees and competitive
+                                exchange rate in the market.
                             </BlobComp>
 
                             <BlobComp
                                 icon="annotation"
                                 title="SMS notifications">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Maiores impedit perferendis
-                                suscipit eaque, iste dolor cupiditate blanditiis
-                                ratione.
+                                We will inform you in an easy-to-understand
+                                manner of the entire process of payment.
                             </BlobComp>
                         </dl>
                     </div>
@@ -129,12 +124,14 @@ const Component = () => {
             <div className="bg-gradient-to-br from-purple-800 to-blue-800">
                 <div className="max-w-2xl mx-auto text-center py-10 sm:py-16 px-4 md:py-20 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-medium text-white sm:text-4xl">
-                        <span className="block">Start sending money</span>
+                        <span className="block">
+                            Everything into one QSRemit App
+                        </span>
                     </h2>
                     <p className="mt-4 text-lg leading-6 text-blue-200">
-                        Ac euismod vel sit maecenas id pellentesque eu sed
-                        consectetur. Malesuada adipiscing sagittis vel nulla
-                        nec.
+                        Start sending money to your loved ones easily using
+                        QSRemit mobile App. Registration, verification and money
+                        transfer all under your fingertip.
                     </p>
                     <a
                         href="https://apps.apple.com/jp/app/qsremit-japan/id1466724211"

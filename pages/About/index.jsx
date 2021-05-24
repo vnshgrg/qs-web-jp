@@ -104,18 +104,16 @@ const Component = (props) => {
                 </div>
                 <h2 className="mt-14">
                     <span className="mt-2 block text-2xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-3xl">
-                        Message from president
+                        Message from CEO
                     </span>
                 </h2>
-                <p className="mt-6 text-gray-500 leading-8 ">
-                    Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                    sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
+                <p className="mt-6 text-blue-600 leading-8 text-2xl font-medium ">
+                    顧客の信頼に堅実に応える海外送金専門会社
                 </p>
                 <p className="mt-4 text-gray-500 leading-8 ">
-                    Sit dui mi, nibh dui, diam eget aliquam. Aliquet nec orci
-                    mattis amet quisque ullamcorper neque, nibh sem. At arcu,
-                    sit dui mi, nibh dui, diam eget aliquam. Aliquet nec orci
-                    mattis amet quisque ullamcorper neque, nibh sem.
+                    2013年10月に韓国送金を始め海外送金サービスを開始し、お客様の信頼と応援により現在に至りました。
+                    経験が豊富なスタッフと一緒に、顧客の皆様の満足と安心を得られる海外送金サービスを提供してまいります。
+                    これからも皆様のなお一層のご支援を心よりお願い申し上げます。
                 </p>
                 <SeeAllBranch />
             </div>

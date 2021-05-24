@@ -70,7 +70,7 @@ const branches = [
     },
     {
         name: 'AARYAN ASIAN RESTAURANT & BAR',
-        location: 'Tokorozawa (Tochigi)',
+        location: 'Tokorozawa (Saitama)',
         details: [
             '〒359-0041 埼玉県所沢市中新井 2-211-7',
             'Saitama-Ken Tokorozawa-Shi Nakaarai 2-211-7 (359-0041)',
@@ -145,7 +145,7 @@ const branches = [
         location: 'Shinjuku (Tokyo)',
         details: [
             '〒160-0021 東京都新宿区歌舞伎町 2-41-12 泉ビル 301号',
-            'Tokyo-To, Shinjuku-Ku, Kabukicho 2-41-12 Izumi Biru (160-0021)',
+            'Tokyo-To, Shinjuku-Ku, Kabukicho 2-41-12 Izumi Biru 301 (160-0021)',
             'TEL: 090-8803-2289'
         ]
     },
@@ -155,7 +155,7 @@ const branches = [
         details: [
             '〒110-0005 東京都台東区上野 ５-25-4',
             'Tokyo-To, Taito-Ku, Ueno 5-25-4 (110-0005)',
-            'TEL: 03-5937-6321'
+            'TEL: 080-5088-9664'
         ]
     },
     {

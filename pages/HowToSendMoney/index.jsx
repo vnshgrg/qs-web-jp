@@ -12,11 +12,8 @@ const Component = () => {
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
-                    <span className="block text-base text-blue-600 font-semibold tracking-wide uppercase">
+                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-blue-700 sm:text-4xl">
                         How to send money
-                    </span>
-                    <span className="mt-2 block text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Sending happiness by transfering money
                     </span>
                 </h1>
                 <p className="mt-6 text-xl text-gray-500 leading-8 ">
