@@ -181,10 +181,7 @@ const Component = () => {
                         Our branches throughout Japan
                     </span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-500 leading-8 ">
-                    Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                    sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
-                </p>
+
                 <div className="py-16">
                     <ul className="divide-y divide-gray-200">
                         {branches.map((branch, index) => (

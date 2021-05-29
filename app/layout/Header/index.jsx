@@ -4,7 +4,7 @@ import { Navigation } from '../../components';
 const Header = ({ children }) => {
     return (
         <header>
-            <div className="relative bg-gradient-to-br from-blue-800 to-blue-900 overflow-hidden">
+            <div className="relative bg-gradient-to-br from-blue-800 to-blue-900">
                 <div
                     className="hidden sm:block sm:absolute sm:inset-0"
                     aria-hidden="true">
@@ -38,7 +38,7 @@ const Header = ({ children }) => {
                         />
                     </svg>
                 </div>
-                <div className="relative pb-0 pt-6 md:py-6">
+                <div className="relative py-6">
                     <Navigation />
                     {children}
                 </div>

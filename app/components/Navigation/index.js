@@ -94,8 +94,8 @@ const Navigation = () => {
                 leave="duration-100 ease-in"
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95">
-                <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-                    <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10">
+                    <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5  ">
                         <div className="px-5 pt-4 flex items-center justify-between">
                             <div>
                                 <span className="text-3xl tracking-normal font-normal text-gray-400 sm:leading-normal">
@@ -153,8 +153,9 @@ const Navigation = () => {
                             <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                                 {t('notices')}
                             </a>
+
+                            <LanguageSwitcher />
                         </div>
-                        <LanguageSwitcher />
                     </div>
                 </div>
             </Transition>

@@ -18,10 +18,7 @@ const Component = (props) => {
                         About QSRemit
                     </span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-500 leading-8 ">
-                    Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                    sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
-                </p>
+
                 <div className="bg-white shadow overflow-hidden sm:rounded-lg mt-8 sm:mt-12">
                     <div className="px-4 py-5 bg-blue-700 sm:px-6">
                         <h3 className="text-lg leading-6 font-medium text-white">

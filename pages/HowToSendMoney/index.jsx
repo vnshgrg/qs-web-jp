@@ -16,10 +16,7 @@ const Component = () => {
                         How to send money
                     </span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-500 leading-8 ">
-                    Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                    sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
-                </p>
+
                 <div className="bg-white overflow-hidden shadow rounded-lg divide-y mt-8">
                     <div className="">
                         <div className="bg-gray-400 aspect-w-16 aspect-h-9">

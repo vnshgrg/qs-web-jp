@@ -66,7 +66,7 @@ const Footer = () => {
                         </Link>
                     </div>
                 </nav>
-                <div className="mt-8 flex justify-center space-x-6">
+                {/* <div className="mt-8 flex justify-center space-x-6">
                     <a href="#" className=" text-blue-300 hover:text-white">
                         <span className="sr-only">Facebook</span>
                         <svg
@@ -138,8 +138,9 @@ const Footer = () => {
                         </svg>
                     </a>
                 </div>
+                 */}
                 <nav
-                    className="-mx-5 my-2 flex flex-wrap justify-center text-sm"
+                    className="-mx-5 my-2 mt-8 flex flex-wrap justify-center text-sm"
                     aria-label="Footer">
                     <div className="px-5 py-2">
                         <Link href="/Terms01">

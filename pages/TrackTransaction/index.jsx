@@ -203,10 +203,6 @@ const Component = () => {
                         Track your transaction status
                     </span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-500 leading-8 text-center">
-                    Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                    sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
-                </p>
 
                 <div className="mx-auto w-full sm:w-2/3 mt-10 text-center border border-gray-200 py-6 px-4 rounded-xl">
                     {renderTracker()}
