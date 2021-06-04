@@ -33,12 +33,12 @@ const branches = [
         ]
     },
     {
-        name: 'LUMBINI INDIAN NEPALI RESTAURANT',
+        name: 'DAJU BHAI MART',
         location: 'Hakata (Fukuoka)',
         details: [
-            '〒812-0041 福岡県福岡市博多区吉塚 1-16-7 ステーションサイト ヨシツ"カ1F',
-            'Fukuoka-Ken Fukuoka-Shi Hakata-Ku Yoshizuka 1-16-7 Station Side Yoshizuka 1F (812-0041)',
-            'TEL: 080-7621-6321 / 080-3952-0535 (Narayan)'
+            '〒812-0044 福岡県福岡市博多区千代 1-29-21 ハイコートA号室',
+            'Fukuoka-Ken Fukuoka-Shi Hakata-Ku Chiyo 1-29-21 High Court A (812-0044)',
+            'TEL: 080-7621-6321 (Narayan)'
         ]
     },
     {
