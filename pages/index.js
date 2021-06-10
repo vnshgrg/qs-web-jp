@@ -214,7 +214,7 @@ const Component = () => {
                         Download for iPhone
                     </a>
                     <a
-                        href="https://play.google.com/store/apps/details?id=com.drminside.qsmobile"
+                        href="https://play.google.com/store/apps/details?id=com.nnp.qsjapan"
                         target="_blank"
                         className="sm:ml-4 mt-4 sm:mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-indigo-50 sm:w-auto">
                         Download for Android

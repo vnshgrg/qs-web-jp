@@ -35,7 +35,7 @@ const Hero = () => {
                                     </div>
                                     <div className="flex w-full sm:w-auto pl-0 pt-4 sm:pl-4 sm:pt-0">
                                         <a
-                                            href="https://play.google.com/store/apps/details?id=com.drminside.qsmobile"
+                                            href="https://play.google.com/store/apps/details?id=com.nnp.qsjapan"
                                             target="_blank"
                                             className="bg-gradient-to-bl from-blue-600 to-blue-700 text-white text-lg font-bold tracking-wide block px-6 py-3 rounded-lg leading-tight hover:bg-blue-700 shadow-lg">
                                             <span className="block text-sm font-normal text-blue-200 leading-tight">
