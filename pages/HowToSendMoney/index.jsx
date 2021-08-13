@@ -12,7 +12,7 @@ const Component = () => {
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
-                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-blue-700 sm:text-4xl">
+                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
                         How to send money
                     </span>
                 </h1>
@@ -29,7 +29,7 @@ const Component = () => {
                         </span>
                         <a
                             href="#"
-                            className="mt-3 sm:mt-0 text-sm px-4 py-2 bg-blue-700 text-white font-medium rounded hover:bg-blue-800 inline-flex items-center">
+                            className="mt-3 sm:mt-0 text-sm px-4 py-2 bg-primary text-white font-medium rounded hover:bg-yellow-600 inline-flex items-center">
                             <svg
                                 className="h-5 w-5 mr-2"
                                 xmlns="http://www.w3.org/2000/svg"

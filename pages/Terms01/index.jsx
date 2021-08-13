@@ -14,7 +14,7 @@ const Component = (props) => {
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
-                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-blue-700 sm:text-4xl">
+                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
                         反社会的勢力に対する基本方針
                     </span>
                 </h1>

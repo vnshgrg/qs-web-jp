@@ -12,12 +12,14 @@ const Hero = () => {
                     <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-start">
                         <div>
                             <h1 className="mt-4 text-4xl leading-none font-semibold text-white sm:mt-5">
-                                <span className="text-blue-200 font-normal text-3xl md:block">
+                                <span className="text-yellow-100 font-normal text-3xl md:block">
                                     {t('title1')}
                                 </span>{' '}
-                                <span className="md:block">{t('title2')}</span>
+                                <span className="mt-4 md:block">
+                                    {t('title2')}
+                                </span>
                             </h1>
-                            <p className="mt-3 text-base text-blue-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                            <p className="mt-5 text-base text-yellow-50 sm:mt-6 sm:text-xl lg:text-lg xl:text-xl">
                                 {t('description')}
                             </p>
                             <div className="mt-12 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
@@ -50,7 +52,7 @@ const Hero = () => {
                                 <Link href="/TrackTransaction">
                                     <a
                                         href="#"
-                                        className="mt-8 text-sm text-blue-200 tracking-wide sm:mt-10 border border-blue-600 inline-block px-5 py-2 rounded-full font-semibold hover:text-white hover:bg-blue-800">
+                                        className="mt-8 text-sm text-yellow-50 tracking-wide sm:mt-10 border border-yellow-500 inline-block px-5 py-2 rounded-full font-semibold hover:text-white hover:bg-yellow-600">
                                         {t('track-transaction')}
                                     </a>
                                 </Link>

@@ -4,12 +4,12 @@ import { Navigation } from '../../components';
 const Header = ({ children }) => {
     return (
         <header>
-            <div className="relative bg-gradient-to-br from-blue-800 to-blue-900">
+            <div className="relative bg-gradient-to-br from-primary to-yellow-600">
                 <div
                     className="hidden sm:block sm:absolute sm:inset-0"
                     aria-hidden="true">
                     <svg
-                        className="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-blue-500 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
+                        className="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-yellow-500 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
                         width="364"
                         height="384"
                         viewBox="0 0 364 384"

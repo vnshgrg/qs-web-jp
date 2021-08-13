@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Select from '../Select';
 import { countries, countriesFlag, serviceCharge } from '../../config';
 import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 
 const sendingCountries = [
     {
@@ -21,9 +22,8 @@ const sendingCountries = [
 
 const RateCalculator = () => {
     const [receivingCountries, setReceivingCountries] = useState([]);
-    const [selectedReceivingCountry, setSelectedReceivingCountry] = useState(
-        null
-    );
+    const [selectedReceivingCountry, setSelectedReceivingCountry] =
+        useState(null);
     const [selectedSendingCountry, setSelectedSendingCountry] = useState(
         sendingCountries[0]
     );
@@ -31,6 +31,8 @@ const RateCalculator = () => {
     const [amount, setAmount] = useState(0);
     const [sendingMethod, setSendingMethod] = useState('bank');
     const [currentServiceCharge, setCurrentServiceCharge] = useState(null);
+    const [currentServiceChargeAmount, setCurrentServiceChargeAmount] =
+        useState(0);
 
     const { t } = useTranslation('ratecalculator');
 
@@ -75,11 +77,55 @@ const RateCalculator = () => {
         fetchRates();
     }, [selectedSendingCountry]);
 
-    // useEffect(() => {
-    //     // get service charge for selected country and sending method
-    //     const serviceChargeRate =
-    //         serviceCharge[selectedReceivingCountry.code][sendingMethod];
-    // }, [sendingMethod, selectedReceivingCountry, amount]);
+    useEffect(() => {
+        // get service charge for selected country and sending method
+        if (selectedReceivingCountry) {
+            const serviceChargeRate =
+                serviceCharge[selectedReceivingCountry.code][sendingMethod];
+            // check if minimum
+            if (serviceChargeRate) {
+                setCurrentServiceChargeAmount(0);
+                const amount = sendingAmount();
+
+                if (amount < serviceChargeRate[0].min) {
+                    setCurrentServiceCharge(
+                        t('service-charge-min-amount', {
+                            sendingCurrency: sendingCurrency(),
+                            minimum: serviceChargeRate[0].min
+                        })
+                    );
+                } else if (
+                    amount > serviceChargeRate[serviceChargeRate.length - 1].max
+                ) {
+                    setCurrentServiceCharge(
+                        t('service-charge-max-amount-exceed', {
+                            sendingCurrency: sendingCurrency(),
+                            maximum:
+                                serviceChargeRate[serviceChargeRate.length - 1]
+                                    .max
+                        })
+                    );
+                } else {
+                    // calculate service charge
+                    let serviceChargeAmount = null;
+                    serviceChargeRate.map((bracket) => {
+                        if (amount >= bracket.min && amount <= bracket.max) {
+                            serviceChargeAmount = bracket.serviceCharge;
+                        }
+                    });
+
+                    setCurrentServiceCharge(
+                        t('service-charge-amount', {
+                            sendingCurrency: sendingCurrency(),
+                            amount: serviceChargeAmount
+                        })
+                    );
+                    setCurrentServiceChargeAmount(serviceChargeAmount);
+                }
+            }
+            // check if maximum
+        }
+    }, [sendingMethod, selectedReceivingCountry, amount, sendingOrReceiving]);
 
     const handleReceivingCountrySelect = (event) => {
         const selectedIndex = event.target.value;
@@ -152,6 +198,7 @@ const RateCalculator = () => {
         if (!selectedReceivingCountry) return null;
 
         if (sendingOrReceiving === 'Sending') {
+            console.log(amount, currentServiceChargeAmount);
             return amount;
         } else {
             return formatAmount(
@@ -176,247 +223,220 @@ const RateCalculator = () => {
 
     const renderResult = () => {
         if (amount === 0 || amount === '') return null;
+
+        let sendingInfo = {};
+        let rateInfo = {};
+        let receivingInfo = {};
         if (sendingOrReceiving === 'Sending') {
-            return (
-                <div className="flow-root">
-                    <ul className="-mb-8">
-                        <li>
-                            <div className="relative pb-4">
-                                <span
-                                    className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                    aria-hidden="true"></span>
-                                <div className="relative flex items-start space-x-3">
-                                    <div>
-                                        <div className="relative px-1">
-                                            <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
-                                                <svg
-                                                    className="h-5 w-5 text-gray-400"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="min-w-0 flex-1 py-1.5">
-                                        <div className="text-base text-gray-600">
-                                            You send{' '}
-                                            <span className="font-medium text-blue-700">
-                                                {`${sendingCurrency()} ${amount}`}
-                                            </span>{' '}
-                                            from {selectedSendingCountry.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+            sendingInfo = {
+                currency: sendingCurrency(),
+                amount:
+                    parseInt(amount, 10) +
+                    parseInt(currentServiceChargeAmount, 10),
+                country: selectedSendingCountry.name
+            };
 
-                        <li>
-                            <div className="relative pb-5">
-                                <span
-                                    className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                    aria-hidden="true"></span>
-                                <div className="relative flex items-start space-x-3">
-                                    <div>
-                                        <div className="relative px-1">
-                                            <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
-                                                <svg
-                                                    className="h-4 w-4 text-gray-400"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="min-w-0 flex-1 py-1.5">
-                                        <div className="text-sm text-gray-400 italic">
-                                            @ rate of{' '}
-                                            {`${sendingCurrency()} 1 = `}
-                                            {selectedReceivingCountry &&
-                                                `${receivingCurrency()} ${
-                                                    selectedReceivingCountry.fxrate
-                                                }`}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+            rateInfo = {
+                sendingCurrency: sendingCurrency(),
+                receivingCurrency: receivingCurrency(),
+                receivingFx: selectedReceivingCountry.fxrate
+            };
+            receivingInfo = {
+                amount: receivingAmount(),
+                country:
+                    selectedReceivingCountry && selectedReceivingCountry.name
+            };
+        } else {
+            sendingInfo = {
+                currency: selectedSendingCountry.currency,
+                amount:
+                    parseInt(sendingAmount(), 10) +
+                    parseInt(currentServiceChargeAmount, 10),
+                country: selectedSendingCountry.name
+            };
 
-                        <li>
-                            <div className="relative pb-12">
-                                <div className="relative flex items-start space-x-3">
-                                    <div>
-                                        <div className="relative px-1">
-                                            <div className="h-8 w-8 bg-blue-100 rounded-full ring-4 ring-white flex items-center justify-center">
-                                                <svg
-                                                    className="h-4 w-4 text-blue-600"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="min-w-0 flex-1 py-1.5">
-                                        <div className="text-base text-gray-600">
-                                            <span className="font-medium text-blue-700">
-                                                {receivingAmount()}
-                                            </span>{' '}
-                                            is received at{' '}
-                                            {selectedReceivingCountry &&
-                                                selectedReceivingCountry.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            rateInfo = {
+                sendingCurrency: receivingCurrency(),
+                receivingCurrency:
+                    selectedReceivingCountry && sendingCurrency(),
+                receivingFx: selectedReceivingCountry.fxrate
+            };
+
+            receivingInfo = {
+                amount: receivingAmount(),
+                country:
+                    selectedReceivingCountry && selectedReceivingCountry.name
+            };
+        }
+
+        let sendingMethodIcon = null;
+        if (sendingMethod === 'cash') {
+            sendingMethodIcon = (
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                />
             );
         } else {
-            return (
-                <div className="flow-root">
-                    <ul className="-mb-8">
-                        <li>
-                            <div className="relative pb-4">
-                                <span
-                                    className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                    aria-hidden="true"></span>
-                                <div className="relative flex items-start space-x-3">
-                                    <div>
-                                        <div className="relative px-1">
-                                            <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
-                                                <svg
-                                                    className="h-5 w-5 text-gray-400"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="min-w-0 flex-1 py-1.5">
-                                        <div className="text-base text-gray-600">
-                                            You send{' '}
-                                            <span className="font-medium text-blue-700">
-                                                {`${
-                                                    selectedSendingCountry.currency
-                                                } ${sendingAmount()}`}
-                                            </span>{' '}
-                                            from {selectedSendingCountry.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="relative pb-5">
-                                <span
-                                    className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                    aria-hidden="true"></span>
-                                <div className="relative flex items-start space-x-3">
-                                    <div>
-                                        <div className="relative px-1">
-                                            <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
-                                                <svg
-                                                    className="h-4 w-4 text-gray-400"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="min-w-0 flex-1 py-1.5">
-                                        <div className="text-sm text-gray-400 italic">
-                                            @ rate of{' '}
-                                            {`${receivingCurrency()} 1 = `}
-                                            {selectedReceivingCountry &&
-                                                `${sendingCurrency()} ${
-                                                    selectedReceivingCountry.fxrate
-                                                }`}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="relative pb-12">
-                                <div className="relative flex items-start space-x-3">
-                                    <div>
-                                        <div className="relative px-1">
-                                            <div className="h-8 w-8 bg-blue-100 rounded-full ring-4 ring-white flex items-center justify-center">
-                                                <svg
-                                                    className="h-4 w-4 text-blue-600"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="min-w-0 flex-1 py-1.5">
-                                        <div className="text-base text-gray-600">
-                                            <span className="font-medium text-blue-700">
-                                                {receivingAmount()}
-                                            </span>{' '}
-                                            is received at{' '}
-                                            {selectedReceivingCountry &&
-                                                selectedReceivingCountry.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            sendingMethodIcon = (
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
+                />
             );
         }
+
+        return (
+            <div className="flow-root">
+                <ul className="-mb-8">
+                    <li>
+                        <div className="relative pb-4">
+                            <span
+                                className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
+                                aria-hidden="true"></span>
+                            <div className="relative flex items-start space-x-3">
+                                <div>
+                                    <div className="relative px-1">
+                                        <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
+                                            <svg
+                                                className="h-5 w-5 text-gray-400"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="min-w-0 flex-1 py-1.5">
+                                    <Trans
+                                        i18nKey="ratecalculator:sending"
+                                        values={sendingInfo}
+                                        components={[
+                                            <div className="text-base text-gray-600" />,
+                                            <span className="font-medium text-blue-700" />
+                                        ]}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div className="relative pb-5">
+                            <span
+                                className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
+                                aria-hidden="true"></span>
+                            <div className="relative flex items-start space-x-3">
+                                <div>
+                                    <div className="relative px-1">
+                                        <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
+                                            <svg
+                                                className="h-4 w-4 text-gray-400"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="min-w-0 flex-1 py-1.5">
+                                    <div className="text-sm text-gray-400 italic">
+                                        {currentServiceCharge}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div className="relative pb-5">
+                            <span
+                                className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
+                                aria-hidden="true"></span>
+                            <div className="relative flex items-start space-x-3">
+                                <div>
+                                    <div className="relative px-1">
+                                        <div className="h-8 w-8 bg-gray-100 rounded-full ring-4 ring-white flex items-center justify-center">
+                                            <svg
+                                                className="h-4 w-4 text-gray-400"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="min-w-0 flex-1 py-1.5">
+                                    <Trans
+                                        i18nKey="ratecalculator:rate"
+                                        values={rateInfo}
+                                        components={[
+                                            <div className="text-sm text-gray-400 italic" />
+                                        ]}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div className="relative pb-12">
+                            <div className="relative flex items-start space-x-3">
+                                <div>
+                                    <div className="relative px-1">
+                                        <div className="h-8 w-8 bg-blue-100 rounded-full ring-4 ring-white flex items-center justify-center">
+                                            <svg
+                                                className="h-4 w-4 text-blue-600"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                {sendingMethodIcon}
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="min-w-0 flex-1 py-1.5">
+                                    <Trans
+                                        i18nKey="ratecalculator:receiving"
+                                        values={receivingInfo}
+                                        components={[
+                                            <div className="text-base text-gray-600" />,
+                                            <span className="font-medium text-blue-700" />
+                                        ]}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        );
     };
 
     const SendBank = (
@@ -596,7 +616,7 @@ const RateCalculator = () => {
             <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
                 <div className="px-4 pt-8 pb-4 sm:px-8">
                     <div className="">
-                        <h2 className="text-xl font-semibold tracking-tight text-blue-700 sm:text-2xl">
+                        <h2 className="text-xl font-semibold tracking-tight text-primary sm:text-2xl">
                             {t('rate-calculator')}
                         </h2>
                         <p className="mt-1 text-md leading-6 text-gray-500">

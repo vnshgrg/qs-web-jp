@@ -14,17 +14,17 @@ const Component = (props) => {
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
-                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-blue-700 sm:text-4xl">
+                    <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
                         About QSRemit
                     </span>
                 </h1>
 
                 <div className="bg-white shadow overflow-hidden sm:rounded-lg mt-8 sm:mt-12">
-                    <div className="px-4 py-5 bg-blue-700 sm:px-6">
+                    <div className="px-4 py-5 bg-primary sm:px-6">
                         <h3 className="text-lg leading-6 font-medium text-white">
                             Company Profile
                         </h3>
-                        <p className="mt-1 max-w-2xl text-sm text-blue-200">
+                        <p className="mt-1 max-w-2xl text-sm text-yellow-100">
                             QSRemit Japan
                         </p>
                     </div>
@@ -104,7 +104,7 @@ const Component = (props) => {
                         Message from CEO
                     </span>
                 </h2>
-                <p className="mt-6 text-blue-600 leading-8 text-2xl font-medium ">
+                <p className="mt-6 text-primary leading-8 text-2xl font-medium ">
                     顧客の信頼に堅実に応える海外送金専門会社
                 </p>
                 <p className="mt-4 text-gray-500 leading-8 ">

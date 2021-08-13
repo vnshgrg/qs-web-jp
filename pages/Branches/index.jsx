@@ -177,7 +177,7 @@ const Component = () => {
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
-                    <span className="mt-2 block text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <span className="mt-2 block text-3xl leading-8 font-bold tracking-tight text-primary sm:text-4xl">
                         Our branches throughout Japan
                     </span>
                 </h1>

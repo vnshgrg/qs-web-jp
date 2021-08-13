@@ -3,6 +3,10 @@ module.exports = {
         extend: {
             listStyleType: {
                 roman: 'upper-roman'
+            },
+            colors: {
+                primary: '#ef6127',
+                secondary: '#034aa1'
             }
         }
     },
