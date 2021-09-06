@@ -6,7 +6,8 @@ import { useRouter } from 'next/router';
 const languageNames = {
     en: '🇺🇸  English',
     jp: '🇯🇵  日本語',
-    np: '🇳🇵  नेपाली'
+    np: '🇳🇵  नेपाली',
+    kr: '🇰🇷  한국인'
 };
 
 const LanguageSwitcher = () => {

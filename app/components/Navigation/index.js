@@ -17,17 +17,17 @@ const Navigation = () => {
                         <Link href="/">
                             <a>
                                 <span className="sr-only">QS Remit</span>
-                                {/* <img
-                                className="h-8 w-auto sm:h-10"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                alt=""
-                            /> */}
-                                <span className="text-3xl tracking-normal font-normal text-white sm:leading-normal">
+                                <img
+                                    className="h-10 w-auto sm:h-12"
+                                    src="qs-logo.svg"
+                                    alt="QSRemit"
+                                />
+                                {/* <span className="text-3xl tracking-normal font-normal text-white sm:leading-normal">
                                     <span className="text-yellow-50 font-bold">
                                         QS
                                     </span>
                                     Remit
-                                </span>
+                                </span> */}
                             </a>
                         </Link>
                         <div className="-mr-2 flex items-center md:hidden">

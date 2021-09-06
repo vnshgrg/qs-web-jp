@@ -3,6 +3,8 @@ import Head from 'next/head';
 import MainLayout from '../app/layout/MainLayout';
 import { BlobComp, LogoCloud, RateList } from '../app/components';
 import { siteName } from '../app/config';
+import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 
 import { Dialog, Transition } from '@headlessui/react';
 
@@ -16,6 +18,8 @@ const Component = () => {
     const openModal = () => {
         setOpen(true);
     };
+
+    const { t } = useTranslation('common');
 
     return (
         <>
@@ -87,16 +91,13 @@ const Component = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="">
                         <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase">
-                            Send money, Send happiness
+                            {t('send-money-send-happiness')}
                         </h2>
                         <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                            Setting the standard for International remittance
-                            service
+                            {t('intro-heading')}
                         </p>
                         <p className="mt-4 max-w-2xl text-xl text-gray-500">
-                            We are the fastest growing international remittance
-                            service provider with best rate in the market and no
-                            hidden fees.
+                            {t('intro-description')}
                         </p>
                     </div>
 
@@ -104,31 +105,23 @@ const Component = () => {
                         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                             <BlobComp
                                 icon="lightning-blot"
-                                title="Transfers are instant">
-                                Simple remittance request with fast payment.
-                                Transfer money easily through your smartphone
-                                from anywhere
+                                title={t('blob-1-title')}>
+                                {t('blob-1-description')}
                             </BlobComp>
 
                             <BlobComp
                                 icon="lock-closed"
-                                title="Secure & hassle free">
-                                Partnership with the world’s trusted banks and
-                                payment providers. Safe system licensed by
-                                financial authorities.
+                                title={t('blob-2-title')}>
+                                {t('blob-2-description')}
                             </BlobComp>
-                            <BlobComp
-                                icon="globe"
-                                title="Competitive exchange rates">
-                                Save up to 90% with lower fees and competitive
-                                exchange rate in the market.
+                            <BlobComp icon="globe" title={t('blob-3-title')}>
+                                {t('blob-3-description')}
                             </BlobComp>
 
                             <BlobComp
                                 icon="annotation"
-                                title="SMS notifications">
-                                We will inform you in an easy-to-understand
-                                manner of the entire process of payment.
+                                title={t('blob-4-title')}>
+                                {t('blob-4-description')}
                             </BlobComp>
                         </dl>
                     </div>
@@ -198,14 +191,10 @@ const Component = () => {
             <div className="bg-gradient-to-br from-primary to-yellow-500">
                 <div className="max-w-2xl mx-auto text-center py-10 sm:py-16 px-4 md:py-20 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-medium text-white sm:text-4xl">
-                        <span className="block">
-                            Everything into one QSRemit App
-                        </span>
+                        <span className="block">{t('cta-title')}</span>
                     </h2>
                     <p className="mt-4 text-lg leading-6 text-yellow-100">
-                        Start sending money to your loved ones easily using
-                        QSRemit mobile App. Registration, verification and money
-                        transfer all under your fingertip.
+                        {t('cta-description')}
                     </p>
                     <a
                         href="https://apps.apple.com/jp/app/qsremit-japan/id1466724211"

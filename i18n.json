@@ -1,5 +1,5 @@
 {
-    "locales": ["en", "jp", "np"],
+    "locales": ["en", "jp", "np", "kr"],
     "defaultLocale": "jp",
     "pages": {
         "*": ["common", "navigation"],

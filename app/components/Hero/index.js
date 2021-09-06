@@ -15,7 +15,7 @@ const Hero = () => {
                                 <span className="text-yellow-100 font-normal text-3xl md:block">
                                     {t('title1')}
                                 </span>{' '}
-                                <span className="mt-4 md:block">
+                                <span className="mt-4 block">
                                     {t('title2')}
                                 </span>
                             </h1>
