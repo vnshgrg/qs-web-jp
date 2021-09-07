@@ -92,8 +92,13 @@ const Footer = () => {
                         </Link>
                     </div>
                 </nav>
+                <div className="-mx-5 my-2 mt-4 flex flex-wrap justify-center text-sm">
+                    <span className="bg-white inline-block py-2 px-4 rounded-lg">
+                        <img src="/fsa-jp.png" className="h-10" />
+                    </span>
+                </div>
 
-                <p className="mt-2 text-center text-base text-yellow-100">
+                <p className="mt-4 text-center text-base text-yellow-100">
                     &copy; 2021 N&amp;P Japan Co., Ltd. All rights reserved.
                 </p>
             </div>

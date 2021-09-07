@@ -147,12 +147,10 @@ const Component = () => {
                                 with mobile application
                             </p>
                             <p className="mt-4 text-lg text-gray-500">
-                                Semper curabitur ullamcorper posuere nunc sed.
-                                Ornare iaculis bibendum malesuada faucibus
-                                lacinia porttitor. Pulvinar laoreet sagittis
-                                viverra duis. In venenatis sem arcu pretium
-                                pharetra at. Lectus viverra dui tellus ornare
-                                pharetra.
+                                Start sending money from Japan easily by using
+                                our mobile application. With our online member
+                                registration service it is fast and simple to
+                                become our member.
                             </p>
 
                             <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase mt-14">
@@ -162,12 +160,11 @@ const Component = () => {
                                 with online eKYC
                             </p>
                             <p className="mt-4 text-lg text-gray-500">
-                                Semper curabitur ullamcorper posuere nunc sed.
-                                Ornare iaculis bibendum malesuada faucibus
-                                lacinia porttitor. Pulvinar laoreet sagittis
-                                viverra duis. In venenatis sem arcu pretium
-                                pharetra at. Lectus viverra dui tellus ornare
-                                pharetra.
+                                There's no need to come to our office or branch
+                                in person to become a member and send money to
+                                your loved ones. All necessary procedures for
+                                becoming our member is now simplified with our
+                                state of the art verification system.
                             </p>
 
                             <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase mt-14">
@@ -177,12 +174,11 @@ const Component = () => {
                                 with tracking and history
                             </p>
                             <p className="mt-4 text-lg text-gray-500">
-                                Semper curabitur ullamcorper posuere nunc sed.
-                                Ornare iaculis bibendum malesuada faucibus
-                                lacinia porttitor. Pulvinar laoreet sagittis
-                                viverra duis. In venenatis sem arcu pretium
-                                pharetra at. Lectus viverra dui tellus ornare
-                                pharetra.
+                                Once you have our mobile app installed and
+                                membership verified, it is as simple as tapping
+                                a button to check rates, send money and also
+                                track your current and previous remittance
+                                records in realtime.
                             </p>
                         </div>
                     </div>
