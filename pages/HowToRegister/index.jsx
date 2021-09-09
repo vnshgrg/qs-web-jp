@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 import PageLayout from '../../app/layout/PageLayout';
 import { siteName } from '../../app/config';
 import { PageContact, SeeAllBranch } from '../../app/components/';
 
 const Component = () => {
+    const { t } = useTranslation('common');
     return (
         <>
             <Head>
@@ -13,7 +15,7 @@ const Component = () => {
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
                     <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                        How to register
+                        {t('title-register')}
                     </span>
                 </h1>
 
@@ -25,7 +27,7 @@ const Component = () => {
                     </div>
                     <div className="px-4 py-4 sm:px-6 flex flex-col sm:flex-row items-center">
                         <span className="text-gray-700 text-base leading-tight text-center sm:text-left sm:flex-1">
-                            How to register with QSRemit app
+                            {t('title-register-app')}
                         </span>
                         <a
                             href="#"

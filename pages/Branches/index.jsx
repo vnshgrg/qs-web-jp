@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 import PageLayout from '../../app/layout/PageLayout';
 import { siteName } from '../../app/config';
 import { PageContact, Branch } from '../../app/components';
@@ -170,6 +171,7 @@ const branches = [
 ];
 
 const Component = () => {
+    const { t } = useTranslation('common');
     return (
         <>
             <Head>
@@ -178,7 +180,7 @@ const Component = () => {
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
                     <span className="mt-2 block text-3xl leading-8 font-bold tracking-tight text-primary sm:text-4xl">
-                        Our branches throughout Japan
+                        {t('title-branch')}
                     </span>
                 </h1>
 

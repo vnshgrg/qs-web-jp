@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
+
 import PageLayout from '../../app/layout/PageLayout';
 import { siteName } from '../../app/config';
 import Icon from '../../app/components/Icon';
@@ -10,6 +12,8 @@ const Component = () => {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState(null);
     const [pin, setPin] = useState('');
+
+    const { t } = useTranslation('common');
 
     const handleTrack = async () => {
         try {
@@ -56,7 +60,7 @@ const Component = () => {
                     setPin('');
                 }}
                 className=" mt-6 inline-flex items-center justify-center text-sm font-medium text-gray-700 ">
-                Check another
+                {t('tracker-check-another')}
             </button>
         );
     };
@@ -70,12 +74,12 @@ const Component = () => {
                 />
             </div>
             <p className="block mt-2 text-gray-700 font-semibold">
-                Could not find transaction
+                {t('tracker-not-found')}
             </p>
             <p className="block mt-1 text-gray-500 text-sm">
-                We could not find transaction with pin code{' '}
+                {t('tracker-not-found-description-1')}{' '}
                 <span className="font-semibold">{txnid}</span>.<br />
-                Are you sure you entered the correct pin code.
+                {t('tracker-not-found-description-2')}
             </p>
             {CheckAnother()}
         </div>
@@ -102,18 +106,16 @@ const Component = () => {
                             />
                         </div>
                         <p className="block mt-2 text-red-600 font-semibold">
-                            Transfer canceled
+                            {t('tracker-canceled-description-1')}
                         </p>
                         <p className="text-gray-500 mt-1 text-sm">
-                            Your transaction was canceled.
-                            <br />
-                            Please contact our support team for more details.
+                            {t('tracker-canceled-description-2')}
                         </p>
                         <p className="block mt-4 text-gray-500 text-xs">
-                            Transaction ID:{' '}
+                            {t('tracker-transaction-id')}:{' '}
                             <span className="font-semibold">{txnid}</span>
                             <br />
-                            Last updated:{' '}
+                            {t('tracker-last-updated')}:{' '}
                             <span className="text-bold">{time}</span>
                         </p>
                         {CheckAnother()}
@@ -129,16 +131,13 @@ const Component = () => {
                             />
                         </div>
                         <p className="block mt-2 text-green-600 font-semibold">
-                            Payment complete
-                        </p>
-                        <p className="text-gray-500 mt-1 text-sm">
-                            Your money have been paid successfully.
+                            {t('tracker-success')}
                         </p>
                         <p className="block mt-4 text-gray-500 text-xs">
-                            Transaction ID:{' '}
+                            {t('tracker-transaction-id')}:{' '}
                             <span className="font-semibold">{txnid}</span>
                             <br />
-                            Last updated:{' '}
+                            {t('tracker-last-updated')}:{' '}
                             <span className="text-bold">{time}</span>
                         </p>
                         {CheckAnother()}
@@ -174,11 +173,10 @@ const Component = () => {
                     />
                 </div>
                 <p className="text-gray-500 text-sm mt-6">
-                    Enter your 15 digit long transaction pin number to track.
+                    {t('tracker-pin-description')}
                 </p>
                 <p className="text-gray-500 text-sm mt-3">
-                    Contact our support staff from below if you are having
-                    difficulty in using this transaction tracker.
+                    {t('tracker-contact-support')}
                 </p>
                 <button
                     onClick={handleTrack}
@@ -197,10 +195,10 @@ const Component = () => {
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
                     <span className="block text-base text-center text-blue-600 font-semibold tracking-wide uppercase">
-                        Thanks for sending money with us
+                        {t('title-thanks')}
                     </span>
                     <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Track your transaction status
+                        {t('title-track')}
                     </span>
                 </h1>
 

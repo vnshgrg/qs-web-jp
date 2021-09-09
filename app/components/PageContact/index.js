@@ -1,12 +1,14 @@
 import React from 'react';
+import useTranslation from 'next-translate/useTranslation';
 
 const PageContact = () => {
+    const { t } = useTranslation('common');
     return (
         <div className="mx-auto max-w-4xl py-16 px-4 sm:px-6 lg:px-8 md:mt-16">
             <div className="mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
                 <div>
                     <h2 className="text-xl text-gray-800 sm:text-2xl">
-                        Head Office
+                        {t('footer-title-1')}
                     </h2>
                     <div className="mt-3">
                         <p className="text-lg text-gray-500">
@@ -37,7 +39,7 @@ const PageContact = () => {
                 </div>
                 <div className="mt-12 sm:mt-16 md:mt-0">
                     <h2 className="text-xl text-gray-800 sm:text-2xl">
-                        Customer Support
+                        {t('footer-title-2')}
                     </h2>
                     <div className="mt-4">
                         <div className="flex">

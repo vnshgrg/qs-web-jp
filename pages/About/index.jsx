@@ -15,14 +15,14 @@ const Component = (props) => {
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
                     <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                        About QSRemit
+                        {t('title-about')}
                     </span>
                 </h1>
 
                 <div className="bg-white shadow overflow-hidden sm:rounded-lg mt-8 sm:mt-12">
                     <div className="px-4 py-5 bg-primary sm:px-6">
                         <h3 className="text-lg leading-6 font-medium text-white">
-                            Company Profile
+                            {t('title-company-profile')}
                         </h3>
                         <p className="mt-1 max-w-2xl text-sm text-yellow-100">
                             QSRemit Japan

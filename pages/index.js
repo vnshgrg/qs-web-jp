@@ -4,7 +4,6 @@ import MainLayout from '../app/layout/MainLayout';
 import { BlobComp, LogoCloud, RateList } from '../app/components';
 import { siteName } from '../app/config';
 import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans';
 
 import { Dialog, Transition } from '@headlessui/react';
 
@@ -141,44 +140,33 @@ const Component = () => {
                         </div>
                         <div className="px-4 max-w-xl mx-auto sm:px-6 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
                             <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase mt-8 md:mt-14">
-                                Easy online registration
+                                {t('feature-1-title')}
                             </h2>
                             <p className="mt-1 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                                with mobile application
+                                {t('feature-1-heading')}
                             </p>
                             <p className="mt-4 text-lg text-gray-500">
-                                Start sending money from Japan easily by using
-                                our mobile application. With our online member
-                                registration service it is fast and simple to
-                                become our member.
+                                {t('feature-1-description')}
                             </p>
 
                             <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase mt-14">
-                                Easy verification
+                                {t('feature-2-title')}
                             </h2>
                             <p className="mt-1 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                                with online eKYC
+                                {t('feature-2-heading')}
                             </p>
                             <p className="mt-4 text-lg text-gray-500">
-                                There's no need to come to our office or branch
-                                in person to become a member and send money to
-                                your loved ones. All necessary procedures for
-                                becoming our member is now simplified with our
-                                state of the art verification system.
+                                {t('feature-2-description')}
                             </p>
 
                             <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase mt-14">
-                                Convenient service
+                                {t('feature-3-title')}
                             </h2>
                             <p className="mt-1 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                                with tracking and history
+                                {t('feature-3-heading')}
                             </p>
                             <p className="mt-4 text-lg text-gray-500">
-                                Once you have our mobile app installed and
-                                membership verified, it is as simple as tapping
-                                a button to check rates, send money and also
-                                track your current and previous remittance
-                                records in realtime.
+                                {t('feature-3-description')}
                             </p>
                         </div>
                     </div>
