@@ -85,7 +85,7 @@ export async function getServerSideProps() {
                         }
                     }`,
             variables: {
-                id: 1
+                categoryId: 1
             }
         },
         {
