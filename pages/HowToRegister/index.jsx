@@ -10,7 +10,7 @@ const Component = () => {
     return (
         <>
             <Head>
-                <title>How to register - {siteName}</title>
+                <title>{siteName} - How to register</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>

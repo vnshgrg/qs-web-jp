@@ -10,7 +10,7 @@ const Component = (props) => {
     return (
         <>
             <Head>
-                <title>About us - {t('site-name')}</title>
+                <title>{t('site-name')} - About us</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
@@ -91,9 +91,9 @@ const Component = (props) => {
                                     <p>Capital</p>
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
-                                    <p>60,000,000円</p>
+                                    <p>40,000,000円</p>
 
-                                    <p>JPY 60,000,000</p>
+                                    <p>JPY 40,000,000</p>
                                 </dd>
                             </div>
                         </dl>

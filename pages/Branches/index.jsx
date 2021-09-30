@@ -124,15 +124,6 @@ const branches = [
         ]
     },
     {
-        name: 'OSAKA',
-        location: 'Osaka',
-        details: [
-            '〒542-0082 大阪府大阪市中央区島之内 2-3-4 サンライズハイツ 1F',
-            'Osaka-Shi, Chuo-Ku, Shimanouchi 2-3-4 Sunrise Heights 1F (542-0082)',
-            'TEL: 06-6212-4469'
-        ]
-    },
-    {
         name: 'TSUKUBA',
         location: 'Ibaraki',
         details: [
@@ -175,7 +166,7 @@ const Component = () => {
     return (
         <>
             <Head>
-                <title>Branches - {siteName}</title>
+                <title>{siteName} - Branches</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>

@@ -17,22 +17,40 @@ export const countries = {
 };
 
 export const countriesFlag = {
-    AUS: '🇦🇺',
-    BGD: '🇧🇩',
-    IDN: '🇮🇩',
-    IND: '🇮🇳',
-    KOR: '🇰🇷',
-    LKA: '🇱🇰',
-    MMR: '🇲🇲',
-    MYS: '🇲🇾',
-    NPL: '🇳🇵',
-    PAK: '🇵🇰',
-    PHL: '🇵🇭',
-    RUS: '🇷🇺',
-    SGP: '🇸🇬',
-    THA: '🇹🇭',
-    VNM: '🇻🇳'
+    AUS: renderFlag('AUS'),
+    BGD: renderFlag('BGD'),
+    IDN: renderFlag('IDN'),
+    IND: renderFlag('IND'),
+    KOR: renderFlag('KOR'),
+    LKA: renderFlag('LKA'),
+    MMR: renderFlag('MMR'),
+    MYS: renderFlag('MYS'),
+    NPL: renderFlag('NPL'),
+    PAK: renderFlag('PAK'),
+    PHL: renderFlag('PHL'),
+    RUS: renderFlag('RUS'),
+    SGP: renderFlag('SGP'),
+    THA: renderFlag('THA'),
+    VNM: renderFlag('VNM')
 };
+
+export function renderFlag(CODE) {
+    return <SvgFlag code={CODE} />;
+
+    // if (supportsFlagEmoji()) {
+    //     return emojiFlags[CODE];
+    // } else {
+    // }
+}
+
+export function SvgFlag({ code }) {
+    return (
+        <img
+            src={`/flags/${code.toLowerCase()}.svg`}
+            className="w-auto h-4 rounded-sm shadow"
+        />
+    );
+}
 
 export const serviceCharge = {
     AUS: {

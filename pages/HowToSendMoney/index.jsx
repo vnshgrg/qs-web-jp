@@ -10,7 +10,7 @@ const Component = () => {
     return (
         <>
             <Head>
-                <title>How to send money - {siteName}</title>
+                <title>{siteName} - How to send money</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
@@ -51,7 +51,6 @@ const Component = () => {
                 </div>
                 <SeeAllBranch />
             </div>
-
             <PageContact />
         </>
     );

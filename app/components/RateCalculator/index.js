@@ -9,15 +9,9 @@ const sendingCountries = [
     {
         code: 'JPN',
         currency: 'JPY',
-        name: '🇯🇵 Japan',
+        name: 'Japan',
         url: 'https://nnpj.qsremit.net/openapi/get/fxrates'
     }
-    // {
-    //     code: 'KOR',
-    //     currency: 'KRW',
-    //     name: '🇰🇷 Korea',
-    //     url: 'https://www.qsremit.kr/openapi/get/fxrates'
-    // }
 ];
 
 const RateCalculator = () => {
@@ -59,7 +53,7 @@ const RateCalculator = () => {
                 );
                 const options = uniqueCountries.map(
                     ({ country, currency, fxrate }) => {
-                        let countryName = `${countriesFlag[country]} ${countries[country]}`;
+                        let countryName = `${countries[country]}`;
                         return {
                             name: countryName,
                             code: country,
@@ -128,7 +122,7 @@ const RateCalculator = () => {
     }, [sendingMethod, selectedReceivingCountry, amount, sendingOrReceiving]);
 
     const handleReceivingCountrySelect = (event) => {
-        const selectedIndex = event.target.value;
+        const selectedIndex = event;
         const newReceivingCountry = receivingCountries[selectedIndex];
         setSelectedReceivingCountry(newReceivingCountry);
 
@@ -145,7 +139,7 @@ const RateCalculator = () => {
     };
 
     const handleSendingCountrySelect = (event) => {
-        const selectedIndex = event.target.value;
+        const selectedIndex = event;
         setSelectedSendingCountry(sendingCountries[selectedIndex]);
     };
 
@@ -520,6 +514,7 @@ const RateCalculator = () => {
                                 label={t('from')}
                                 options={sendingCountries}
                                 onChange={handleSendingCountrySelect}
+                                selected={selectedSendingCountry}
                             />
                         </div>
                         <div>
@@ -530,6 +525,7 @@ const RateCalculator = () => {
                                 label={t('to')}
                                 options={receivingCountries}
                                 onChange={handleReceivingCountrySelect}
+                                selected={selectedReceivingCountry}
                             />
                         </div>
                     </div>
@@ -613,7 +609,7 @@ const RateCalculator = () => {
 
     return (
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
-            <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+            <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg">
                 <div className="px-4 pt-8 pb-4 sm:px-8">
                     <div className="">
                         <h2 className="text-xl font-semibold tracking-tight text-primary sm:text-2xl">
