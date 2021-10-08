@@ -97,15 +97,6 @@ const branches = [
         ]
     },
     {
-        name: 'SMILE FOOD',
-        location: 'Fukuoka',
-        details: [
-            '〒802-0016 福岡県北九州市小倉北区宇佐町 2-8-8 大西ビル201号',
-            'Fukuoka-Ken Kitakyusyu-Shi Kokurakita-Ku Usamachi 2-8-8 Onishi Bldg. 201 (802-0016)',
-            'TEL: 093-967-9399'
-        ]
-    },
-    {
         name: 'KUMAMOTO HALAL',
         location: 'Kumamoto',
         details: [
