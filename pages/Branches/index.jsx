@@ -43,12 +43,12 @@ const branches = [
         ]
     },
     {
-        name: 'SAHARA',
+        name: 'SAHARA ASIAN FOOD',
         location: 'Funabashi (Chiba)',
         details: [
-            '〒273-0003 千葉県船橋市宮本 6-14-7 関ビル2F',
-            'Chiba-Ken Funabashi-Shi Miyamoto 6-14-7 Seki Bldg. 2F (273-0003)',
-            'TEL: 0474-11-7385'
+            '〒273-0003 千葉県船橋市宮本 1-18-8-1F',
+            'Chiba-ken Funabashi-Shi Miyamoto 1-18-8-1F (273-0003)',
+            'TEL: 047-779-2210'
         ]
     },
     {
