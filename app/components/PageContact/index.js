@@ -12,7 +12,7 @@ const PageContact = () => {
                     </h2>
                     <div className="mt-3">
                         <p className="text-lg text-gray-500">
-                            〒169-0073東京都新宿百人町2-20-2-201
+                            〒169-0073東京都新宿区百人町2-20-2-201
                             <br />
                             <span className="text-sm">
                                 201-2-20-2 Hyakunin-Cho, Shinjuku-Ku

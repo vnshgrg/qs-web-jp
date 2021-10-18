@@ -46,7 +46,7 @@ const Component = (props) => {
                                     <p>Head office</p>
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
-                                    <p>〒169-0073東京都新宿百人町2-20-2</p>
+                                    <p>〒169-0073 東京都新宿区百人町2-20-2</p>
                                     <p>
                                         2-20-2 Hyakunin-Cho, Shinjuku-Ku, Tokyo,
                                         Japan (169-0073)
