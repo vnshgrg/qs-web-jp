@@ -73,21 +73,21 @@ const Footer = () => {
                     <div className="px-5 py-2">
                         <Link href="/Terms03">
                             <a className="text-yellow-100 hover:text-white">
-                                Terms of usage
+                                {t('jp-terms-01')}
                             </a>
                         </Link>
                     </div>
                     <div className="px-5 py-2">
                         <Link href="/Terms02">
                             <a className="text-yellow-100 hover:text-white">
-                                Privacy policy
+                                {t('jp-terms-02')}
                             </a>
                         </Link>
                     </div>
                     <div className="px-5 py-2">
                         <Link href="/Terms01">
                             <a className="text-yellow-100 hover:text-white">
-                                Policy against Anti-social Forces
+                                {t('jp-terms-03')}
                             </a>
                         </Link>
                     </div>

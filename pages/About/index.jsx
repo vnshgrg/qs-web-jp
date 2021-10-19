@@ -46,10 +46,13 @@ const Component = (props) => {
                                     <p>Head office</p>
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
-                                    <p>〒169-0073 東京都新宿区百人町2-20-2</p>
                                     <p>
-                                        2-20-2 Hyakunin-Cho, Shinjuku-Ku, Tokyo,
-                                        Japan (169-0073)
+                                        〒169-0073 東京都新宿区百人町2-20-2
+                                        金子ハイツ２F
+                                    </p>
+                                    <p>
+                                        2F Kaneko Heights 2-20-2 Hyakunin-Cho,
+                                        Shinjuku-Ku, Tokyo, Japan (169-0073)
                                     </p>
                                     <p className="mt-2">TEL: 03-5937-6321</p>
                                     <p>FAX:03-5937-6320</p>
@@ -105,12 +108,10 @@ const Component = (props) => {
                     </span>
                 </h2>
                 <p className="mt-6 text-primary leading-8 text-2xl font-medium ">
-                    顧客の信頼に堅実に応える海外送金専門会社
+                    {t('ceo-message-title')}
                 </p>
                 <p className="mt-4 text-gray-500 leading-8 ">
-                    2013年10月に韓国送金を始め海外送金サービスを開始し、お客様の信頼と応援により現在に至りました。
-                    経験が豊富なスタッフと一緒に、顧客の皆様の満足と安心を得られる海外送金サービスを提供してまいります。
-                    これからも皆様のなお一層のご支援を心よりお願い申し上げます。
+                    {t('ceo-message-description')}
                 </p>
                 <SeeAllBranch />
             </div>

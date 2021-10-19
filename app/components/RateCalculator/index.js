@@ -447,7 +447,7 @@ const RateCalculator = () => {
             <label
                 htmlFor="bank"
                 className="ml-3 block text-sm font-medium text-gray-700">
-                Bank deposite
+                {t('bank-deposit')}
             </label>
         </div>
     );
@@ -466,7 +466,7 @@ const RateCalculator = () => {
             <label
                 htmlFor="cash"
                 className="ml-3 block text-sm font-medium text-gray-700">
-                Cash pickup
+                {t('cash-pickup')}
             </label>
         </div>
     );
