@@ -61,15 +61,6 @@ const branches = [
         ]
     },
     {
-        name: 'NAMASTE INDIAN RESTAURANT & BAR',
-        location: 'Oyama (Tochigi)',
-        details: [
-            '〒323-0022 栃木県大山市駅東通り 2-40-32 1F',
-            'Tochigi-Ken Oyama-Shi Ekihigashidori 2-40-32 1F (323-0022)',
-            'TEL: 080-3082-6183'
-        ]
-    },
-    {
         name: 'AARYAN ASIAN RESTAURANT & BAR',
         location: 'Tokorozawa (Saitama)',
         details: [
