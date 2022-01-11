@@ -1,11 +1,18 @@
 export const countries = {
+    ARM: 'Armenia',
     AUS: 'Australia',
+    AZE: 'Azerbaijan',
     BGD: 'Bangladesh',
+    BLR: 'Belarus',
     IDN: 'Indonesia',
     IND: 'India',
+    KAZ: 'Kazakhstan',
+    KGZ: 'Kyrgyzstan',
     KOR: 'South Korea',
     LKA: 'Sri Lanka',
+    MDA: 'Moldova',
     MMR: 'Myanmar',
+    MNG: 'Mongolia',
     MYS: 'Malaysia',
     NPL: 'Nepal',
     PAK: 'Pakistan',
@@ -13,17 +20,27 @@ export const countries = {
     RUS: 'Russia',
     SGP: 'Singapore',
     THA: 'Thailand',
+    TJK: 'Tajikistan',
+    UKR: 'Ukraine',
+    UZB: 'Uzbekistan',
     VNM: 'Viet Nam'
 };
 
 export const countriesFlag = {
+    ARM: renderFlag('ARM'),
     AUS: renderFlag('AUS'),
+    AZE: renderFlag('AZE'),
     BGD: renderFlag('BGD'),
+    BLR: renderFlag('BLR'),
     IDN: renderFlag('IDN'),
     IND: renderFlag('IND'),
+    KAZ: renderFlag('KAZ'),
+    KGZ: renderFlag('KGZ'),
     KOR: renderFlag('KOR'),
     LKA: renderFlag('LKA'),
+    MDA: renderFlag('MDA'),
     MMR: renderFlag('MMR'),
+    MNG: renderFlag('MNG'),
     MYS: renderFlag('MYS'),
     NPL: renderFlag('NPL'),
     PAK: renderFlag('PAK'),
@@ -31,6 +48,9 @@ export const countriesFlag = {
     RUS: renderFlag('RUS'),
     SGP: renderFlag('SGP'),
     THA: renderFlag('THA'),
+    TJK: renderFlag('TJK'),
+    UKR: renderFlag('UKR'),
+    UZB: renderFlag('UZB'),
     VNM: renderFlag('VNM')
 };
 
@@ -53,7 +73,37 @@ export function SvgFlag({ code }) {
 }
 
 export const serviceCharge = {
+    ARM: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
     AUS: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
+    AZE: {
         type: { bank: true, cash: false },
         bank: [
             {
@@ -100,6 +150,21 @@ export const serviceCharge = {
             }
         ]
     },
+    BLR: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
     IDN: {
         type: { bank: true, cash: false },
         bank: [
@@ -140,6 +205,36 @@ export const serviceCharge = {
             }
         ]
     },
+    KAZ: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
+    KGZ: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
     KOR: {
         type: { bank: true, cash: false },
         bank: [
@@ -177,6 +272,21 @@ export const serviceCharge = {
             }
         ]
     },
+    MDA: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
     MMR: {
         type: { bank: true, cash: false },
         bank: [
@@ -194,6 +304,21 @@ export const serviceCharge = {
                 min: 301201,
                 max: 1001800,
                 serviceCharge: 1800
+            }
+        ]
+    },
+    MNG: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
             }
         ]
     },
@@ -375,6 +500,51 @@ export const serviceCharge = {
                 min: 301201,
                 max: 1001500,
                 serviceCharge: 1500
+            }
+        ]
+    },
+    RJK: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
+    UKR: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
+    UZB: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
             }
         ]
     },

@@ -74,6 +74,7 @@ const RateCalculator = () => {
     useEffect(() => {
         // get service charge for selected country and sending method
         if (selectedReceivingCountry) {
+            console.log(selectedReceivingCountry);
             const serviceChargeRate =
                 serviceCharge[selectedReceivingCountry.code][sendingMethod];
             // check if minimum
@@ -504,7 +505,13 @@ const RateCalculator = () => {
 
         return (
             <div className="mt-6">
-                <form action="#" method="POST" className="space-y-6">
+                <form
+                    action="#"
+                    method="POST"
+                    className="space-y-6"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                    }}>
                     <div className="grid grid-cols-2 gap-x-6">
                         <div>
                             <label htmlFor="name" className="sr-only">
