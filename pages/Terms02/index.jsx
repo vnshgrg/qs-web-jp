@@ -19,7 +19,7 @@ const Component = (props) => {
                     </span>
                 </h1>
                 <p className="mt-6 text-xl text-gray-500 leading-8 ">
-                    株式会社Ｎ＆Ｐ
+                    株式会社N&amp;P
                     JAPAN（以下「当社」といいます。）は、「個人情報の保護に関する法律」に基づき、会員の個人情報を下記のように取り扱います。
                 </p>
                 <p className="mt-6 text-xl text-gray-500 font-bold">
