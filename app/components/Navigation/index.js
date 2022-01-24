@@ -14,16 +14,21 @@ const Navigation = () => {
                 aria-label="Global">
                 <div className="flex items-center flex-1">
                     <div className="flex items-center justify-between w-full md:w-auto">
-                        <Link href="/">
-                            <a>
-                                <span className="sr-only">QS Remit</span>
-                                <img
-                                    className="h-10 w-auto sm:h-12"
-                                    src="/qs-logo.svg"
-                                    alt="QSRemit"
-                                />
-                            </a>
-                        </Link>
+                        <div className="flex items-start -mr-28">
+                            <Link href="/">
+                                <a>
+                                    <span className="sr-only">QS Remit</span>
+                                    <img
+                                        className="h-10 w-auto sm:h-12"
+                                        src="/qs-logo.svg"
+                                        alt="QSRemit"
+                                    />
+                                </a>
+                            </Link>
+                            <span className="inline-block text-white text-xs font-bold -mt-3 ml-1">
+                                10<sup>th</sup> Anniversary
+                            </span>
+                        </div>
                         <div className="-mr-2 flex items-center md:hidden">
                             <button
                                 onClick={() => setIsOpen(true)}
