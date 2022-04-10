@@ -5,7 +5,7 @@ const qsRemit = ({ Component, pageProps }) => {
         <>
             <Head>
                 <meta
-                    http-equiv="Content-Security-Policy"
+                    httpEquiv="Content-Security-Policy"
                     content="upgrade-insecure-requests"
                 />
             </Head>
