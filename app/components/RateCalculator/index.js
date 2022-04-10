@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Select from '../Select';
-import { countries, countriesFlag, serviceCharge } from '../../config';
+import { countries, serviceCharge } from '../../config';
 import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
 
