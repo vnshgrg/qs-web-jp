@@ -70,15 +70,6 @@ const branches = [
         ]
     },
     {
-        name: 'SUNITA KITCHEN & BAR',
-        location: 'Gunma',
-        details: [
-            '〒370-0532 群馬県邑楽郡大泉町坂田 2-12-6',
-            'Gunma-Ken Oragun Oizumi Machi Sakada 2-12-6 (370-0532)',
-            'TEL: 080-4880-3355'
-        ]
-    },
-    {
         name: 'SUPA DEURALI',
         location: 'Gunma',
         details: [
