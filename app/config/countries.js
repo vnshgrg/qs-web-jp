@@ -12,6 +12,7 @@ export const countries = {
     IDN: 'Indonesia',
     IND: 'India',
     KAZ: 'Kazakhstan',
+    KHM: 'Cambodia',
     KGZ: 'Kyrgyzstan',
     KOR: 'South Korea',
     LKA: 'Sri Lanka',
@@ -47,6 +48,7 @@ export const countriesFlag = {
     IDN: renderFlag('IDN'),
     IND: renderFlag('IND'),
     KAZ: renderFlag('KAZ'),
+    KHM: renderFlag('KHM'),
     KGZ: renderFlag('KGZ'),
     KOR: renderFlag('KOR'),
     LKA: renderFlag('LKA'),
@@ -295,6 +297,21 @@ export const serviceCharge = {
         ]
     },
     KAZ: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000
+            }
+        ]
+    },
+    KHM: {
         type: { bank: true, cash: false },
         bank: [
             {
