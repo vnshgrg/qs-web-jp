@@ -1,4 +1,9 @@
 module.exports = {
+    content: [
+        './pages/**/*.{html,js}',
+        './app/**/*.{html,js}',
+        './node_modules/tw-elements/dist/js/**/*.js'
+    ],
     theme: {
         extend: {
             listStyleType: {
@@ -22,6 +27,7 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/line-clamp')
+        require('@tailwindcss/line-clamp'),
+        require('tw-elements/dist/plugin')
     ]
 };
