@@ -1,42 +1,71 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Navigation } from '../../components';
 
 const Header = ({ children }) => {
+    const [heroHeight, setHeroHeight] = useState(0);
+
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (heroHeight !== ref.current.clientHeight) {
+                setHeroHeight(ref.current.clientHeight);
+            }
+        };
+
+        setTimeout(() => {
+            handleResize();
+        }, 500);
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <header>
-            <div className="relative bg-gradient-to-br from-primary to-yellow-600">
+            <div
+                ref={ref}
+                className="relative bg-gradient-to-br from-primary to-yellow-600">
                 <div
-                    className="hidden sm:block sm:absolute sm:inset-0"
-                    aria-hidden="true">
-                    <svg
-                        className="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-yellow-500 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
-                        width="364"
-                        height="384"
-                        viewBox="0 0 364 384"
-                        fill="none">
-                        <defs>
-                            <pattern
-                                id="eab71dd9-9d7a-47bd-8044-256344ee00d0"
-                                x="0"
-                                y="0"
-                                width="20"
-                                height="20"
-                                patternUnits="userSpaceOnUse">
-                                <rect
-                                    x="0"
-                                    y="0"
-                                    width="4"
-                                    height="4"
-                                    fill="currentColor"
+                    className="absolute flex flex-grow w-full overflow-hidden"
+                    style={{ height: heroHeight }}>
+                    <div
+                        id="carouselExampleSlidesOnly"
+                        class="carousel slide relative"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner relative w-full overflow-hidden">
+                            <div class="carousel-item active relative float-left w-full">
+                                <img
+                                    src="/backgrounds/01.jpg"
+                                    class="block w-full "
+                                    alt="Wild Landscape"
                                 />
-                            </pattern>
-                        </defs>
-                        <rect
-                            width="364"
-                            height="384"
-                            fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)"
-                        />
-                    </svg>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img
+                                    src="/backgrounds/02.jpg"
+                                    class="block w-full "
+                                />
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img
+                                    src="/backgrounds/03.jpg"
+                                    class="block w-full "
+                                    alt="Exotic Fruits"
+                                />
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img
+                                    src="/backgrounds/04.jpg"
+                                    class="block w-full "
+                                    alt="Exotic Fruits"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="relative py-6">
                     <Navigation />
