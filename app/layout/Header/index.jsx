@@ -34,33 +34,33 @@ const Header = ({ children }) => {
                     style={{ height: heroHeight }}>
                     <div
                         id="carouselExampleSlidesOnly"
-                        class="carousel slide relative"
+                        className="carousel slide relative"
                         data-bs-ride="carousel">
-                        <div class="carousel-inner relative w-full overflow-hidden">
-                            <div class="carousel-item active relative float-left w-full">
+                        <div className="carousel-inner relative w-full overflow-hidden">
+                            <div className="carousel-item active relative float-left w-full">
                                 <img
                                     src="/backgrounds/01.jpg"
-                                    class="block w-full "
+                                    className="block w-full "
                                     alt="Wild Landscape"
                                 />
                             </div>
-                            <div class="carousel-item relative float-left w-full">
+                            <div className="carousel-item relative float-left w-full">
                                 <img
                                     src="/backgrounds/02.jpg"
-                                    class="block w-full "
+                                    className="block w-full "
                                 />
                             </div>
-                            <div class="carousel-item relative float-left w-full">
+                            <div className="carousel-item relative float-left w-full">
                                 <img
                                     src="/backgrounds/03.jpg"
-                                    class="block w-full "
+                                    className="block w-full "
                                     alt="Exotic Fruits"
                                 />
                             </div>
-                            <div class="carousel-item relative float-left w-full">
+                            <div className="carousel-item relative float-left w-full">
                                 <img
                                     src="/backgrounds/04.jpg"
-                                    class="block w-full "
+                                    className="block w-full "
                                     alt="Exotic Fruits"
                                 />
                             </div>
