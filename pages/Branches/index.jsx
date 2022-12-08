@@ -131,6 +131,24 @@ const branches = [
             'Chiba-ken, Ichikawa-Shi, Minamiyawata 4-6-2 Takahashi Biru 3F (272-0023)',
             'TEL: 080-4888-1368'
         ]
+    },
+    {
+        name: 'NAMASTE MART',
+        location: 'Hiroshima',
+        details: [
+            '〒720-0053 広島県福山市大黒町 1番37号',
+            'Hiroshima-ken Fukuyama-shi Daikoku-machi 1-37 (720-0053)',
+            'TEL: 070-2408-5528 (Sumita)'
+        ]
+    },
+    {
+        name: 'SAINO MART',
+        location: 'Okinawa',
+        details: [
+            '〒902-0067 沖縄県那覇市安里1-2-9-1F',
+            'Okinawa-ken Naha-shi Asato 1-2-9-1F (902-0067)',
+            'TEL: 098-894-8461 (Srijana)'
+        ]
     }
 ];
 
