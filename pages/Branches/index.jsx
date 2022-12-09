@@ -149,6 +149,15 @@ const branches = [
             'Okinawa-ken Naha-shi Asato 1-2-9-1F (902-0067)',
             'TEL: 098-894-8461 (Srijana)'
         ]
+    },
+    {
+        name: 'VAJRA SPICE & FOOD BHANDAR',
+        location: 'Fukuoka',
+        details: [
+            '〒811-1302 福岡県福岡市南区井尻 4-33-10',
+            'Fukuoka-ken Fukuoka-shi Minami-ku ijiri 4-33-10',
+            'TEL: 092-984-3283 (Baburam)'
+        ]
     }
 ];
 
