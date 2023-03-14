@@ -61,15 +61,6 @@ const branches = [
         ]
     },
     {
-        name: 'AARYAN ASIAN RESTAURANT & BAR',
-        location: 'Tokorozawa (Saitama)',
-        details: [
-            '〒359-0041 埼玉県所沢市中新井 2-211-7',
-            'Saitama-Ken Tokorozawa-Shi Nakaarai 2-211-7 (359-0041)',
-            'TEL: 04-2001-1008'
-        ]
-    },
-    {
         name: 'SUPA DEURALI',
         location: 'Gunma',
         details: [
