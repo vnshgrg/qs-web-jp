@@ -74,7 +74,6 @@ const RateCalculator = () => {
     useEffect(() => {
         // get service charge for selected country and sending method
         if (selectedReceivingCountry) {
-            console.log(selectedReceivingCountry);
             const serviceChargeRate =
                 serviceCharge[selectedReceivingCountry.code][sendingMethod];
             // check if minimum
@@ -193,7 +192,6 @@ const RateCalculator = () => {
         if (!selectedReceivingCountry) return null;
 
         if (sendingOrReceiving === 'Sending') {
-            console.log(amount, currentServiceChargeAmount);
             return amount;
         } else {
             return formatAmount(
