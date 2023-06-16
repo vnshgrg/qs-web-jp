@@ -151,7 +151,7 @@ const branches = [
         ]
     },
     {
-        name: "PABI'S COLLECTION MARDI SPICE MARK",
+        name: "PABI'S COLLECTION MARDI SPICE MART",
         location: 'Ikebukuro',
         details: [
             '〒171-0014 東京都豊島区池袋 2-28-8 ウチノコーポ 1F',
@@ -160,7 +160,7 @@ const branches = [
         ]
     },
     {
-        name: "PABI'S COLLECTION",
+        name: "PABI'S COLLECTION - OKUBO",
         location: 'Okubo',
         details: [
             '〒169-0073 東京都新宿百人町 1-20-19 建造物ビル 301',
