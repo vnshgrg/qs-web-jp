@@ -119,7 +119,7 @@ const branches = [
         location: 'Ichikawa (Chiba)',
         details: [
             '〒272-0023 千葉県市川市南八幡 4-6-2 高橋ビル 3F',
-            'Chiba-ken, Ichikawa-Shi, Minamiyawata 4-6-2 Takahashi Biru 3F (272-0023)',
+            'Chiba-Ken, Ichikawa-Shi, Minamiyawata 4-6-2 Takahashi Biru 3F (272-0023)',
             'TEL: 080-4888-1368'
         ]
     },
@@ -128,7 +128,7 @@ const branches = [
         location: 'Hiroshima',
         details: [
             '〒720-0053 広島県福山市大黒町 1番37号',
-            'Hiroshima-ken Fukuyama-shi Daikoku-machi 1-37 (720-0053)',
+            'Hiroshima-Ken Fukuyama-Shi Daikoku-Machi 1-37 (720-0053)',
             'TEL: 070-2408-5528 (Sumita)'
         ]
     },
@@ -137,7 +137,7 @@ const branches = [
         location: 'Okinawa',
         details: [
             '〒902-0067 沖縄県那覇市安里1-2-9-1F',
-            'Okinawa-ken Naha-shi Asato 1-2-9-1F (902-0067)',
+            'Okinawa-Ken Naha-Shi Asato 1-2-9-1F (902-0067)',
             'TEL: 098-894-8461 (Srijana)'
         ]
     },
@@ -146,8 +146,35 @@ const branches = [
         location: 'Fukuoka',
         details: [
             '〒811-1302 福岡県福岡市南区井尻 4-33-10',
-            'Fukuoka-ken Fukuoka-shi Minami-ku ijiri 4-33-10',
+            'Fukuoka-Ken Fukuoka-Shi Minami-Ku Ijiri 4-33-10',
             'TEL: 092-984-3283 (Baburam)'
+        ]
+    },
+    {
+        name: "PABI'S COLLECTION MARDI SPICE MARK",
+        location: 'Ikebukuro',
+        details: [
+            '〒171-0014 東京都豊島区池袋 2-28-8 ウチノコーポ 1F',
+            'Tokyo-To Toshima-Ku Ikebukuro 2-28-8 Uchino Kopo 1F',
+            'TEL: 03-5962-0453'
+        ]
+    },
+    {
+        name: "PABI'S COLLECTION",
+        location: 'Okubo',
+        details: [
+            '〒169-0073 東京都新宿百人町 1-20-19 建造物ビル 301',
+            'Tokyo-To Shinjuku-Ku Hyakunin-Cho 1-20-19 Kido Koro Bldg. 301',
+            'TEL: 03-6786-0652'
+        ]
+    },
+    {
+        name: 'DAJU BHAI PASAL (ダズバイ パサル)',
+        location: 'Fukuoka',
+        details: [
+            '〒812-0054 福岡県福岡市東区馬出 1-29-12 柴田コーポ103',
+            'Fukuoka-Ken Fukuoka-Shi Higashi-Ku Maidashi 1-29-12 Shibata Kopo 103',
+            'TEL: 092-409-1358'
         ]
     }
 ];
