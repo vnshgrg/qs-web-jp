@@ -145,9 +145,9 @@ const branches = [
         name: 'VAJRA SPICE & FOOD BHANDAR',
         location: 'Fukuoka',
         details: [
-            '〒811-1302 福岡県福岡市南区井尻 4-33-10',
-            'Fukuoka-Ken Fukuoka-Shi Minami-Ku Ijiri 4-33-10',
-            'TEL: 092-984-3283 (Baburam)'
+            '〒815-0032 福岡県福岡市南区塩原 3-2-1',
+            'Fukuoka-ken Fukuoka-shi Minami-ku Shiobaru 3-2-1 (815-0032) ',
+            'TEL: 092-515-3372  (Baburam)'
         ]
     },
     {
