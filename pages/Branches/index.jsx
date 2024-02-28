@@ -106,15 +106,6 @@ const branches = [
         ]
     },
     {
-        name: 'VERY G',
-        location: 'Ueno (Tokyo)',
-        details: [
-            '〒110-0005 東京都台東区上野 ５-25-4',
-            'Tokyo-To, Taito-Ku, Ueno 5-25-4 (110-0005)',
-            'TEL: 080-5088-9664'
-        ]
-    },
-    {
         name: 'MAI TOAN',
         location: 'Ichikawa (Chiba)',
         details: [
@@ -130,15 +121,6 @@ const branches = [
             '〒720-0053 広島県福山市大黒町 1番37号',
             'Hiroshima-Ken Fukuyama-Shi Daikoku-Machi 1-37 (720-0053)',
             'TEL: 070-2408-5528 (Sumita)'
-        ]
-    },
-    {
-        name: 'SAINO MART',
-        location: 'Okinawa',
-        details: [
-            '〒902-0067 沖縄県那覇市安里1-2-9-1F',
-            'Okinawa-Ken Naha-Shi Asato 1-2-9-1F (902-0067)',
-            'TEL: 098-894-8461 (Srijana)'
         ]
     },
     {
