@@ -14,6 +14,20 @@ const sendingCountries = [
     }
 ];
 
+export const filterUniqueCountries = (rateList) => {
+    const distinctCountry = {};
+    rateList.map((item) => {
+        if(!distinctCountry[item.country] && serviceCharge[item.country]) {
+            distinctCountry[item.country] = item;
+        }
+    });
+    const unSorted = Object.values(distinctCountry);
+    const sorted = unSorted.sort((a,b) => countries[a.country] > countries[b.country] ? 1 : -1)
+
+    console.log({unSorted, sorted})
+    return sorted;
+};
+
 const RateCalculator = () => {
     const [receivingCountries, setReceivingCountries] = useState([]);
     const [selectedReceivingCountry, setSelectedReceivingCountry] =
@@ -28,30 +42,14 @@ const RateCalculator = () => {
     const [currentServiceChargeAmount, setCurrentServiceChargeAmount] =
         useState(0);
 
-    const { t } = useTranslation('ratecalculator');
-
-    const filterUniqueCountries = (rateList) => {
-        const distinctCountry = [];
-        const distinctRate = [];
-        rateList.map((country) => {
-            if (distinctCountry.indexOf(country.country) === -1) {
-                distinctCountry.push(country.country);
-                distinctRate.push(country);
-            }
-        });
-
-        return distinctRate;
-    };
+    const { t } = useTranslation('ratecalculator');    
 
     useEffect(() => {
         const fetchRates = async () => {
             try {
                 const URL = selectedSendingCountry.url;
-                const response = await axios.get(URL);
-                const uniqueCountries = filterUniqueCountries(
-                    response.data.list
-                );
-                const options = uniqueCountries.map(
+                const {data: {list}} = await axios.get(URL);
+                const options = filterUniqueCountries(list).map(
                     ({ country, currency, fxrate }) => {
                         let countryName = `${countries[country]}`;
                         return {
