@@ -1,5 +1,5 @@
 export const countries = {
-    ARE: 'United Arab Emirates',
+    ARE: 'UAE',
     ARM: 'Armenia',
     AUS: 'Australia',
     AZE: 'Azerbaijan',
@@ -92,13 +92,18 @@ export const serviceCharge = {
         type: {bank: true, cash: false},
         bank: [
             {
-                min: 5000,
-                max: 301500,
+                min: 2000,
+                max: 51000,
+                serviceCharge: 1000
+            },
+            {
+                min: 51001,
+                max: 300000,
                 serviceCharge: 1500
             },
             {
-                min: 301001,
-                max: 1002000,
+                min: 300001,
+                max: 100000,
                 serviceCharge: 2000
             }
         ]
@@ -107,13 +112,18 @@ export const serviceCharge = {
         type: {bank: true, cash: false},
         bank: [
             {
-                min: 5000,
-                max: 301500,
+                min: 2000,
+                max: 51000,
+                serviceCharge: 1000
+            },
+            {
+                min: 51001,
+                max: 300000,
                 serviceCharge: 1500
             },
             {
-                min: 301001,
-                max: 1002000,
+                min: 300001,
+                max: 100000,
                 serviceCharge: 2000
             }
         ]
@@ -663,13 +673,18 @@ export const serviceCharge = {
         type: { bank: true, cash: false },
         bank: [
             {
-                min: 5000,
-                max: 301500,
+                min: 2000,
+                max: 51000,
+                serviceCharge: 1000
+            },
+            {
+                min: 51001,
+                max: 300000,
                 serviceCharge: 1500
             },
             {
-                min: 301001,
-                max: 1002000,
+                min: 300001,
+                max: 100000,
                 serviceCharge: 2000
             }
         ]
