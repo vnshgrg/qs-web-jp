@@ -47,7 +47,7 @@ const LogoCloud = () => {
                     </div>
                     <div className="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
                         <img
-                            className="h-24"
+                            className="h-20"
                             src="/payout-partners/bank-of-punjab.svg"
                             alt="The Bank of Punjab"
                         />
@@ -64,6 +64,13 @@ const LogoCloud = () => {
                             className="h-16"
                             src="/payout-partners/western-union.svg"
                             alt="Western Union"
+                        />
+                    </div>
+                    <div className="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
+                        <img
+                            className="h-10"
+                            src="/payout-partners/eec.svg"
+                            alt="EEC"
                         />
                     </div>
                 </div>

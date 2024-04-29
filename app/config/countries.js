@@ -1,4 +1,5 @@
 export const countries = {
+    ARE: 'UAE',
     ARM: 'Armenia',
     AUS: 'Australia',
     AZE: 'Azerbaijan',
@@ -7,6 +8,7 @@ export const countries = {
     BRA: 'Brazil',
     CHN: 'China',
     EGY: 'Egypt',
+    GBR: 'UK',
     GHA: 'Ghana',
     HKG: 'Hong Kong',
     IDN: 'Indonesia',
@@ -35,6 +37,7 @@ export const countries = {
 };
 
 export const countriesFlag = {
+    ARE: renderFlag('ARE'),
     ARM: renderFlag('ARM'),
     AUS: renderFlag('AUS'),
     AZE: renderFlag('AZE'),
@@ -43,6 +46,7 @@ export const countriesFlag = {
     BRA: renderFlag('BRA'),
     CHN: renderFlag('CHN'),
     EGY: renderFlag('EGY'),
+    GBR: renderFlag('GBR'),
     GHA: renderFlag('GHA'),
     HKG: renderFlag('HKG'),
     IDN: renderFlag('IDN'),
@@ -72,11 +76,6 @@ export const countriesFlag = {
 
 export function renderFlag(CODE) {
     return <SvgFlag code={CODE} />;
-
-    // if (supportsFlagEmoji()) {
-    //     return emojiFlags[CODE];
-    // } else {
-    // }
 }
 
 export function SvgFlag({ code }) {
@@ -89,6 +88,46 @@ export function SvgFlag({ code }) {
 }
 
 export const serviceCharge = {
+    ARE: {
+        type: {bank: true, cash: false},
+        bank: [
+            {
+                min: 2000,
+                max: 51000,
+                serviceCharge: 1000
+            },
+            {
+                min: 51001,
+                max: 300000,
+                serviceCharge: 1500
+            },
+            {
+                min: 300001,
+                max: 100000,
+                serviceCharge: 2000
+            }
+        ]
+    },
+    GBR: {
+        type: {bank: true, cash: false},
+        bank: [
+            {
+                min: 2000,
+                max: 51000,
+                serviceCharge: 1000
+            },
+            {
+                min: 51001,
+                max: 300000,
+                serviceCharge: 1500
+            },
+            {
+                min: 300001,
+                max: 100000,
+                serviceCharge: 2000
+            }
+        ]
+    },
     ARM: {
         type: { bank: true, cash: false },
         bank: [
@@ -634,13 +673,18 @@ export const serviceCharge = {
         type: { bank: true, cash: false },
         bank: [
             {
-                min: 5000,
-                max: 301500,
+                min: 2000,
+                max: 51000,
+                serviceCharge: 1000
+            },
+            {
+                min: 51001,
+                max: 300000,
                 serviceCharge: 1500
             },
             {
-                min: 301001,
-                max: 1002000,
+                min: 300001,
+                max: 100000,
                 serviceCharge: 2000
             }
         ]
