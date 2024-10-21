@@ -167,6 +167,24 @@ const branches = [
             'Aichi-ken Kasugai-shi kouzojichokita 1-179-1F',
             'TEL: 080-3956-7165'
         ]
+    },
+    {
+        name: 'MAYABI RESTAURANT',
+        location: 'Okinawa',
+        details: [
+            '〒900-0016 沖縄県那覇市前島 2-15-6 コーポ前島1F',
+            'Okinawa-ken Naha-shi Maejima 2−15−6 kopo mejima 1F',
+            'TEL: 098-988-3743'
+        ]
+    },
+    {
+        name: 'NIRVANA INDIAN NEPALI RESTAURANT AND BAR',
+        location: 'Okinawa',
+        details: [
+            '〒904-2214 沖縄県うるま市安慶名 2-9-24 ',
+            'Okinawa-ken Uruma-shi Agena 2-9-24',
+            'TEL: 070-9211-7651'
+        ]
     }
 ];
 
