@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 import PageLayout from '../../app/layout/PageLayout';
-import { siteName } from '../../app/config';
 import { PageContact, Branch } from '../../app/components';
 
 const branches = [
@@ -11,7 +10,7 @@ const branches = [
         location: 'Kasumigaseki (Saitama)',
         details: [
             '〒350-1103 埼玉県川越市霞ヶ関 1-3-15 霞ヶ関ビル104',
-            'Saitama-Ken Kawagoe-Shi Kasumigaseki 1-3-15, Kasumigaseki bldg. 104 (350-1103)',
+            'Saitama-Ken Kawagoe-Shi Kasumigaseki 1-3-15 Kasumigaseki bldg. 104 (350-1103)',
             'TEL: 0492-32-2771'
         ]
     },
@@ -20,7 +19,7 @@ const branches = [
         location: 'Kamifukuoka (Saitama)',
         details: [
             '〒356-0004 埼玉県ふじみ野市上福岡 1-6-27 2F',
-            'Saitama-Ken Fujimino-Dhi Kamifukuoka 1-6-27 Pure bldg.2F (356-0004)',
+            'Saitama-Ken Fujimino-Dhi Kamifukuoka 1-6-27 Pure bldg. 2F (356-0004)',
             'TEL: 070-3521-3222'
         ]
     },
@@ -47,7 +46,7 @@ const branches = [
         location: 'Funabashi (Chiba)',
         details: [
             '〒273-0003 千葉県船橋市宮本 1-18-8-1F',
-            'Chiba-ken Funabashi-Shi Miyamoto 1-18-8-1F (273-0003)',
+            'Chiba-Ken Funabashi-Shi Miyamoto 1-18-8-1F (273-0003)',
             'TEL: 047-779-2210'
         ]
     },
@@ -83,7 +82,7 @@ const branches = [
         location: 'Arakawa (Tokyo)',
         details: [
             '〒116-0002 東京都荒川区荒川 3-60-10 キムチの高麗',
-            'Tokyo-To, Arakawa-Ku, Arakawa 3-60-10 Kimchi No Koryo (116-0002)',
+            'Tokyo-To Arakawa-Ku Arakawa 3-60-10 Kimchi No Koryo (116-0002)',
             'TEL: 03-3801-0003'
         ]
     },
@@ -92,7 +91,7 @@ const branches = [
         location: 'Ibaraki',
         details: [
             '〒305-0034 茨城県つくば市小野崎 1736-2',
-            'Ibaraki-Ken, Tsukuba-Shi, Onozaki 1736-2 (305-0034)',
+            'Ibaraki-Ken Tsukuba-Shi Onozaki 1736-2 (305-0034)',
             'TEL: 080-4070-5339'
         ]
     },
@@ -101,7 +100,7 @@ const branches = [
         location: 'Shinjuku (Tokyo)',
         details: [
             '〒160-0021 東京都新宿区歌舞伎町 2-41-12 泉ビル 301号',
-            'Tokyo-To, Shinjuku-Ku, Kabukicho 2-41-12 Izumi Biru 301 (160-0021)',
+            'Tokyo-To Shinjuku-Ku Kabukicho 2-41-12 Izumi Biru 301 (160-0021)',
             'TEL: 090-8803-2289'
         ]
     },
@@ -110,7 +109,7 @@ const branches = [
         location: 'Ichikawa (Chiba)',
         details: [
             '〒272-0023 千葉県市川市南八幡 4-6-2 高橋ビル 3F',
-            'Chiba-Ken, Ichikawa-Shi, Minamiyawata 4-6-2 Takahashi Biru 3F (272-0023)',
+            'Chiba-Ken Ichikawa-Shi Minamiyawata 4-6-2 Takahashi Biru 3F (272-0023)',
             'TEL: 080-4888-1368'
         ]
     },
@@ -124,11 +123,11 @@ const branches = [
         ]
     },
     {
-        name: 'VAJRA SPICE & FOOD BHANDAR',
+        name: 'VAJRA RESTAURANT',
         location: 'Fukuoka',
         details: [
-            '〒815-0032 福岡県福岡市南区塩原 3-2-1',
-            'Fukuoka-ken Fukuoka-shi Minami-ku Shiobaru 3-2-1 (815-0032) ',
+            '〒815-0032 福岡県福岡市南区塩原 3-2-1, 102',
+            'Fukuoka-ken Fukuoka-shi Minami-ku Shiobaru 3-2-1 102 (815-0032) ',
             'TEL: 092-515-3372  (Baburam)'
         ]
     },
@@ -137,7 +136,7 @@ const branches = [
         location: 'Ikebukuro',
         details: [
             '〒171-0014 東京都豊島区池袋 2-28-8 ウチノコーポ 1F',
-            'Tokyo-To Toshima-Ku Ikebukuro 2-28-8 Uchino Kopo 1F',
+            'Tokyo-To Toshima-Ku Ikebukuro 2-28-8 Uchino Kopo 1F (171-0014)',
             'TEL: 03-5962-0453'
         ]
     },
@@ -146,7 +145,7 @@ const branches = [
         location: 'Okubo',
         details: [
             '〒169-0073 東京都新宿百人町 1-20-19 建造物ビル 301',
-            'Tokyo-To Shinjuku-Ku Hyakunin-Cho 1-20-19 Kido Koro Bldg. 301',
+            'Tokyo-To Shinjuku-Ku Hyakunin-Cho 1-20-19 Kido Koro Bldg. 301 (169-0073)',
             'TEL: 03-6786-0652'
         ]
     },
@@ -155,7 +154,7 @@ const branches = [
         location: 'Fukuoka',
         details: [
             '〒812-0054 福岡県福岡市東区馬出 1-29-12 柴田コーポ103',
-            'Fukuoka-Ken Fukuoka-Shi Higashi-Ku Maidashi 1-29-12 Shibata Kopo 103',
+            'Fukuoka-Ken Fukuoka-Shi Higashi-Ku Maidashi 1-29-12 Shibata Kopo 103 (812-0054)',
             'TEL: 092-409-1358'
         ]
     },
@@ -164,7 +163,7 @@ const branches = [
         location: 'Nagoya',
         details: [
             '〒487-0016 愛知県春日井市高蔵寺町北1-179-1F',
-            'Aichi-ken Kasugai-shi kouzojichokita 1-179-1F',
+            'Aichi-Ken Kasugai-Shi kouzojichokita 1-179 1F (487-0016)',
             'TEL: 080-3956-7165'
         ]
     },
@@ -173,7 +172,7 @@ const branches = [
         location: 'Okinawa',
         details: [
             '〒900-0016 沖縄県那覇市前島 2-15-6 コーポ前島1F',
-            'Okinawa-ken Naha-shi Maejima 2−15−6 kopo mejima 1F',
+            'Okinawa-Ken Naha-Shi Maejima 2-15-6 kopo mejima 1F (900-0016)',
             'TEL: 098-988-3743'
         ]
     },
@@ -182,8 +181,17 @@ const branches = [
         location: 'Okinawa',
         details: [
             '〒904-2214 沖縄県うるま市安慶名 2-9-24 ',
-            'Okinawa-ken Uruma-shi Agena 2-9-24',
+            'Okinawa-Ken Uruma-Shi Agena 2-9-24 (904-2214)',
             'TEL: 070-9211-7651'
+        ]
+    },
+    {
+        name: 'ASOKA SPICE',
+        location: 'Higashimatsuyama',
+        details: [
+            '〒355-0021 埼玉県東松山市神明町 2-1-7 ハシモト店舗 1F',
+            'Saitama-Ken Higashimatsuyama Shinmeicho 2-1-7 Hashimot Tenpo 1F (355-0021)',
+            'TEL: 0493-81-7355'
         ]
     }
 ];
