@@ -60,15 +60,6 @@ const branches = [
         ]
     },
     {
-        name: 'SUPA DEURALI',
-        location: 'Gunma',
-        details: [
-            '〒370-0518 群馬県邑楽郡大泉町城之内 4-5-21',
-            'Gunma-Ken Oragun Oizumi Machi Shironouchi 4-5-21 (370-0518)',
-            'TEL: 070-4166-0457'
-        ]
-    },
-    {
         name: 'KUMAMOTO HALAL',
         location: 'Kumamoto',
         details: [
@@ -123,48 +114,12 @@ const branches = [
         ]
     },
     {
-        name: 'VAJRA RESTAURANT',
-        location: 'Fukuoka',
-        details: [
-            '〒815-0032 福岡県福岡市南区塩原 3-2-1, 102',
-            'Fukuoka-ken Fukuoka-shi Minami-ku Shiobaru 3-2-1 102 (815-0032) ',
-            'TEL: 092-515-3372  (Baburam)'
-        ]
-    },
-    {
-        name: "PABI'S COLLECTION MARDI SPICE MART",
-        location: 'Ikebukuro',
-        details: [
-            '〒171-0014 東京都豊島区池袋 2-28-8 ウチノコーポ 1F',
-            'Tokyo-To Toshima-Ku Ikebukuro 2-28-8 Uchino Kopo 1F (171-0014)',
-            'TEL: 03-5962-0453'
-        ]
-    },
-    {
-        name: "PABI'S COLLECTION - OKUBO",
-        location: 'Okubo',
-        details: [
-            '〒169-0073 東京都新宿百人町 1-20-19 建造物ビル 301',
-            'Tokyo-To Shinjuku-Ku Hyakunin-Cho 1-20-19 Kido Koro Bldg. 301 (169-0073)',
-            'TEL: 03-6786-0652'
-        ]
-    },
-    {
         name: 'DAJU BHAI PASAL (ダズバイ パサル)',
         location: 'Fukuoka',
         details: [
             '〒812-0054 福岡県福岡市東区馬出 1-29-12 柴田コーポ103',
             'Fukuoka-Ken Fukuoka-Shi Higashi-Ku Maidashi 1-29-12 Shibata Kopo 103 (812-0054)',
             'TEL: 092-409-1358'
-        ]
-    },
-    {
-        name: 'HIMALAYAN MINI MART',
-        location: 'Nagoya',
-        details: [
-            '〒487-0016 愛知県春日井市高蔵寺町北1-179-1F',
-            'Aichi-Ken Kasugai-Shi kouzojichokita 1-179 1F (487-0016)',
-            'TEL: 080-3956-7165'
         ]
     },
     {
