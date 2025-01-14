@@ -135,7 +135,7 @@ const branches = [
         name: 'NIRVANA INDIAN NEPALI RESTAURANT AND BAR',
         location: 'Okinawa',
         details: [
-            '〒904-2214 沖縄県うるま市安慶名 2-9-24 ',
+            '〒904-2214 沖縄県うるま市安慶名 2-9-24',
             'Okinawa-Ken Uruma-Shi Agena 2-9-24 (904-2214)',
             'TEL: 070-9211-7651'
         ]
@@ -147,6 +147,15 @@ const branches = [
             '〒355-0021 埼玉県東松山市神明町 2-1-7 ハシモト店舗 1F',
             'Saitama-Ken Higashimatsuyama Shinmeicho 2-1-7 Hashimot Tenpo 1F (355-0021)',
             'TEL: 0493-81-7355'
+        ]
+    },
+    {
+        name: 'KURASHIKI MINI MART ',
+        location: 'Okayama',
+        details: [
+            '〒710-0826 岡山県倉敷市老松町 5-1-29 1F',
+            'Okayama-ken Kurashiki-Shi Oimatsucho 5-1-29 1F (710-0826)',
+            'TEL: 080-5812-8540'
         ]
     }
 ];
